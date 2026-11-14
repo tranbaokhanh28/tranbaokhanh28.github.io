@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giới thiệu bản thân</title>
+  <style>
+    /* ===== CSS: định dạng bằng bộ chọn (selector), màu sắc, bảng, danh sách ===== */
+    :root {
+      --hong-dam: #d6336c;
+      --hong: #f783ac;
+      --hong-nhat: #ffd6e7;
+      --hong-nen: #fff0f6;
+      --chu: #4a1a2c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: var(--hong-nen);
+      color: var(--chu);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--hong), var(--hong-dam));
+      color: #fff;
+      text-align: center;
+      padding: 40px 16px 24px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 2.2rem; }
+    header p { margin: 0; font-style: italic; }
+    nav {
+      background: var(--hong-dam);
+      text-align: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+    }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+    section {
+      background: #fff;
+      border: 2px solid var(--hong-nhat);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      color: var(--hong-dam);
+      border-bottom: 3px dotted var(--hong);
+      padding-bottom: 6px;
+      margin-top: 0;
+    }
+    .gioi-thieu { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .gioi-thieu img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--hong);
+      background: var(--hong-nhat);
+    }
+    .gioi-thieu div { flex: 1; min-width: 240px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid var(--hong); padding: 8px 12px; text-align: left; }
+    th { background: var(--hong-nhat); width: 35%; }
+    ul li, ol li { margin-bottom: 4px; }
+    .video-khung { position: relative; padding-bottom: 56.25%; height: 0; }
+    .video-khung iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      border: 0; border-radius: 12px;
+    }
+    .nut {
+      display: inline-block;
+      background: var(--hong-dam);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 0;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .nut:hover { background: var(--hong); }
+    form label { display: block; margin-top: 10px; font-weight: 600; }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 2px solid var(--hong-nhat);
+      border-radius: 8px;
+      font: inherit;
+    }
+    form input:focus, form textarea:focus { outline: none; border-color: var(--hong-dam); }
+    form .nut { margin-top: 12px; }
+    footer {
+      background: var(--hong-dam);
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Phần đầu trang ===== -->
+  <header>
+    <h1>Xin chào, mình là [Họ và tên]!</h1>
+    <p>Chào mừng bạn đến với trang web giới thiệu bản thân của mình</p>
+  </header>
+
+  <!-- ===== Thanh điều hướng: liên kết đến các phần trong cùng trang ===== -->
+  <nav>
+    <a href="#ban-than">Về mình</a>
+    <a href="#so-thich">Sở thích</a>
+    <a href="#video">Video</a>
+    <a href="#lien-he">Liên hệ</a>
+  </nav>
+
+  <main>
+    <!-- ===== Giới thiệu + chèn ảnh ===== -->
+    <section id="ban-than">
+      <h2>Về mình</h2>
+      <div class="gioi-thieu">
+        <!-- Đặt ảnh của bạn cùng thư mục với file này và đổi tên thành anh-cua-toi.jpg -->
+        <img src="anh-cua-toi.jpg" alt="Ảnh đại diện của mình">
+        <div>
+          <p>
+            Mình là một học sinh yêu thích <strong>phim trinh thám</strong>,
+            <strong>siêu nhiên</strong> và đặc biệt là <strong>thể thao điện tử</strong>.
+            Trang web này được mình làm bằng HTML và CSS theo kiến thức môn Tin học 12.
+          </p>
+          <a class="nut" href="https://www.facebook.com/share/1M8o6YtGHe/" target="_blank" rel="noopener">
+            Facebook của mình
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Bảng thông tin cá nhân ===== -->
+    <section>
+      <h2>Thông tin cá nhân</h2>
+      <table>
+        <tr><th>Họ và tên</th><td>[Họ và tên]</td></tr>
+        <tr><th>Ngày sinh</th><td>[dd/mm/yyyy]</td></tr>
+        <tr><th>Lớp</th><td>12[ ]</td></tr>
+        <tr><th>Trường</th><td>[Tên trường]</td></tr>
+        <tr><th>Quê quán</th><td>Quảng Ninh</td></tr>
+      </table>
+    </section>
+
+    <!-- ===== Sở thích: danh sách có thứ tự / không thứ tự ===== -->
+    <section id="so-thich">
+      <h2>Sở thích của mình</h2>
+
+      <h3>Phim yêu thích</h3>
+      <ol>
+        <li><strong>Supernatural</strong> – hai anh em Sam và Dean săn quái vật, ma quỷ trên những chuyến đi dài.</li>
+        <li><strong>The Mentalist</strong> – Patrick Jane dùng khả năng quan sát và đọc vị người khác để phá án.</li>
+      </ol>
+
+      <h3>Đội tuyển yêu thích</h3>
+      <ul>
+        <li>Fan cứng của <strong>Gen.G Esports</strong> (Liên Minh Huyền Thoại – LoL)</li>
+        <li>Thích xem các trận đấu và theo dõi giải đấu LoL</li>
+      </ul>
+    </section>
+
+    <!-- ===== Chèn video YouTube bằng thẻ iframe ===== -->
+    <section id="video">
+      <h2>Video mình thích</h2>
+      <div class="video-khung">
+        <iframe src="https://www.youtube.com/embed/io0UQ74sXfw"
+                title="Video YouTube"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- ===== Biểu mẫu liên hệ ===== -->
+    <section id="lien-he">
+      <h2>Gửi lời nhắn cho mình</h2>
+      <form action="#" method="post">
+        <label for="ten">Tên của bạn</label>
+        <input type="text" id="ten" name="ten" placeholder="Nhập tên của bạn">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="ten@example.com">
+
+        <label for="loinhan">Lời nhắn</label>
+        <textarea id="loinhan" name="loinhan" rows="4" placeholder="Bạn muốn nói gì với mình?"></textarea>
+
+        <button type="submit" class="nut">Gửi lời nhắn</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 – Trang web giới thiệu bản thân | Làm bằng HTML &amp; CSS</p>
+  </footer>
+
+</body>
+</html>
