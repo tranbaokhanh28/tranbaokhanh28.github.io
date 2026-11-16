@@ -499,105 +499,105 @@
     footer { color: #A38A95; }
 
 
-    /* ===== Screenshot-matched soft pink palette ===== */
+    /* ===== Slightly richer pastel pink palette ===== */
     :root {
-      --rose-50: #FCF2F4;
-      --rose-100: #FFE4E9;
-      --rose-200: #FFD3DA;
-      --rose-300: #FAAABD;
-      --rose-600: #D3869F;
-      --rose-700: #B26888;
-      --ink: #4B505A;
-      --muted: #747984;
+      --rose-50: #FBE9EE;
+      --rose-100: #FBD5DF;
+      --rose-200: #F5B9CB;
+      --rose-300: #E995B1;
+      --rose-600: #C65F86;
+      --rose-700: #A9436D;
+      --ink: #414650;
+      --muted: #6D737E;
       --pink: var(--rose-600);
-      --violet: #F4D4DD;
-      --panel: rgba(255,255,255,.88);
-      --line: rgba(211,134,159,.22);
+      --violet: #F2C4D2;
+      --panel: rgba(255,255,255,.90);
+      --line: rgba(198,95,134,.25);
     }
 
     body {
       color: var(--ink);
-      background-color: #FFFFFF;
+      background-color: #FFFCFD;
       background-image:
-        radial-gradient(ellipse at 10% 12%, rgba(255,228,233,.72), transparent 38%),
-        radial-gradient(ellipse at 92% 42%, rgba(250,170,189,.20), transparent 34%),
-        linear-gradient(160deg, #FFFFFF 0%, #FCF2F4 52%, #FFFFFF 100%);
+        radial-gradient(ellipse at 10% 12%, rgba(251,213,223,.82), transparent 38%),
+        radial-gradient(ellipse at 92% 42%, rgba(233,149,177,.25), transparent 34%),
+        linear-gradient(160deg, #FFFCFD 0%, #FBE9EE 52%, #FFFFFF 100%);
     }
 
     .silk-banner {
       background:
         radial-gradient(ellipse at 16% 72%, rgba(255,255,255,.98) 0 12%, transparent 42%),
-        radial-gradient(ellipse at 82% 22%, rgba(250,170,189,.30), transparent 42%),
-        linear-gradient(115deg, #FCF2F4 0%, #FFFFFF 35%, #FFE4E9 70%, #FFD3DA 100%);
-      border-bottom: 1px solid rgba(211,134,159,.16);
+        radial-gradient(ellipse at 82% 22%, rgba(233,149,177,.38), transparent 42%),
+        linear-gradient(115deg, #FBE9EE 0%, #FFFFFF 35%, #FBD5DF 70%, #F5B9CB 100%);
+      border-bottom: 1px solid rgba(198,95,134,.20);
     }
     .silk-banner::before {
       background:
-        linear-gradient(175deg, transparent 34%, rgba(255,255,255,.92) 42%, rgba(255,228,233,.72) 47%, transparent 55%),
-        linear-gradient(165deg, transparent 48%, rgba(255,255,255,.84) 53%, rgba(255,211,218,.42) 59%, transparent 66%);
+        linear-gradient(175deg, transparent 34%, rgba(255,255,255,.92) 42%, rgba(251,213,223,.78) 47%, transparent 55%),
+        linear-gradient(165deg, transparent 48%, rgba(255,255,255,.84) 53%, rgba(245,185,203,.52) 59%, transparent 66%);
     }
     .silk-banner::after {
       background:
-        linear-gradient(12deg, transparent 42%, rgba(255,255,255,.72) 49%, rgba(255,228,233,.56) 53%, transparent 61%),
-        linear-gradient(8deg, transparent 57%, rgba(211,134,159,.15) 62%, transparent 68%);
+        linear-gradient(12deg, transparent 42%, rgba(255,255,255,.72) 49%, rgba(251,213,223,.62) 53%, transparent 61%),
+        linear-gradient(8deg, transparent 57%, rgba(198,95,134,.18) 62%, transparent 68%);
     }
 
-    .banner-kicker, .banner-name { color: #D3869F; }
-    .banner-caption { color: #A86B82; }
-    .brand { color: #B26888; }
-    .brand span, .eyebrow, .section-kicker, .number { color: #D3869F; }
-    nav { color: #747984; }
-    nav a:hover { color: #B26888; }
+    .banner-kicker, .banner-name { color: #C65F86; }
+    .banner-caption { color: #99516D; }
+    .brand { color: #A9436D; }
+    .brand span, .eyebrow, .section-kicker, .number { color: #C65F86; }
+    nav { color: #6D737E; }
+    nav a:hover { color: #A9436D; }
 
     .hero {
       background:
-        radial-gradient(ellipse at 92% 12%, rgba(255,228,233,.78), transparent 36%),
-        linear-gradient(118deg, rgba(255,255,255,.97), rgba(252,242,244,.94) 55%, rgba(255,228,233,.52));
+        radial-gradient(ellipse at 92% 12%, rgba(251,213,223,.88), transparent 36%),
+        linear-gradient(118deg, rgba(255,255,255,.97), rgba(251,233,238,.96) 55%, rgba(251,213,223,.66));
       border: 1px solid #FFFFFF;
-      box-shadow: 0 22px 60px rgba(211,134,159,.12);
+      box-shadow: 0 22px 60px rgba(169,67,109,.15);
     }
-    .hero::before { color: rgba(178,104,136,.48); }
-    .hero::after { color: rgba(211,134,159,.13); }
+    .hero::before { color: rgba(169,67,109,.52); }
+    .hero::after { color: rgba(198,95,134,.17); }
 
-    h1, .info-value, .goal-card h3, .movie-info h3 { color: #4B505A; }
-    h1 span { color: #D3869F; }
-    h2 { color: #4B505A; }
-    .intro, .goal-card p, .interest-list, .movie-info p, .connect p { color: #747984; }
+    h1, .info-value, .goal-card h3, .movie-info h3 { color: #414650; }
+    h1 span { color: #C65F86; }
+    h2 { color: #414650; }
+    .intro, .goal-card p, .interest-list, .movie-info p, .connect p { color: #6D737E; }
 
     .tag {
-      color: #805D6D;
-      border-color: rgba(211,134,159,.26);
-      background: rgba(255,255,255,.84);
+      color: #754357;
+      border-color: rgba(198,95,134,.32);
+      background: rgba(255,255,255,.88);
     }
-    .portrait-shell:before { border-color: rgba(211,134,159,.58); }
-    .portrait-shell:after { border-color: rgba(250,170,189,.72); }
+    .portrait-shell:before { border-color: rgba(198,95,134,.68); }
+    .portrait-shell:after { border-color: rgba(233,149,177,.82); }
 
     .glass {
-      background: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.90);
       border: 1px solid rgba(255,255,255,.98);
-      box-shadow: 0 14px 36px rgba(211,134,159,.09);
+      box-shadow: 0 14px 36px rgba(169,67,109,.12);
     }
-    .info-line { border-bottom-color: rgba(211,134,159,.15); }
-    .info-label, .section-note { color: #8A7B82; }
+    .info-line { border-bottom-color: rgba(198,95,134,.19); }
+    .info-label, .section-note { color: #806C75; }
 
     .goal-card {
-      background: linear-gradient(125deg, #FCF2F4, #FFE4E9 58%, #FFFFFF);
-      border-color: rgba(250,170,189,.52);
+      background: linear-gradient(125deg, #FBE9EE, #FBD5DF 58%, #FFFFFF);
+      border-color: rgba(233,149,177,.62);
     }
     .goal-chip {
-      background: rgba(255,211,218,.48);
-      color: #B26888;
+      background: rgba(245,185,203,.58);
+      color: #A9436D;
     }
 
-    .movie:hover { border-color: rgba(211,134,159,.62); }
+    .movie:hover { border-color: rgba(198,95,134,.72); }
     .button {
       color: #FFFFFF;
-      background: linear-gradient(105deg, #D3869F, #B26888);
-      box-shadow: 0 8px 20px rgba(211,134,159,.22);
+      background: linear-gradient(105deg, #C65F86, #A9436D);
+      box-shadow: 0 8px 20px rgba(169,67,109,.27);
     }
-    .button:hover { filter: brightness(1.05); }
-    .video { border-color: rgba(211,134,159,.22); }
-    footer { color: #9A858E; }
+    .button:hover { filter: brightness(1.06); }
+    .video { border-color: rgba(198,95,134,.28); }
+    footer { color: #8F6D7B; }
 
   </style>
 </head>
