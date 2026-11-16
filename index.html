@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff1f5">
+  <meta name="theme-color" content="#fffdfe">
   <title>Trần Bảo Khanh | Personal Website</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -407,6 +407,198 @@
       .silk-banner::before, .silk-banner::after { animation: none; }
     }
 
+  
+    /* ===== Blush Pastel Palette Update ===== */
+    :root {
+      --rose-50: #FFFDFE;
+      --rose-100: #FFF0F3;
+      --rose-200: #FFE4E9;
+      --rose-300: #FFC8DD;
+      --rose-600: #C792A6;
+      --rose-700: #A86B82;
+      --ink: #57414B;
+      --muted: #8C737E;
+      --pink: var(--rose-600);
+      --violet: #F6A5B8;
+      --panel: rgba(255, 255, 255, 0.85);
+      --line: rgba(199, 146, 166, 0.22);
+    }
+    body {
+      color: var(--ink);
+      background-color: #FFFDFE;
+      background-image:
+        radial-gradient(ellipse at 12% 18%, rgba(255, 228, 233, 0.75), transparent 38%),
+        radial-gradient(ellipse at 88% 45%, rgba(255, 200, 221, 0.35), transparent 36%),
+        linear-gradient(160deg, #FFFDFE 0%, #FFF0F3 50%, #FFFDFE 100%);
+    }
+    .silk-banner {
+      background:
+        radial-gradient(ellipse at 16% 72%, rgba(255, 253, 254, 0.98) 0 12%, transparent 42%),
+        radial-gradient(ellipse at 82% 22%, rgba(246, 165, 184, 0.35), transparent 42%),
+        linear-gradient(115deg, #FFF0F3 0%, #FFFDFE 35%, #FFE4E9 70%, #FFC8DD 100%);
+      border-bottom: 1px solid rgba(199, 146, 166, 0.16);
+    }
+    .silk-banner::before {
+      background:
+        linear-gradient(175deg, transparent 34%, rgba(255, 255, 255, 0.9) 42%, rgba(255, 228, 233, 0.75) 47%, transparent 55%),
+        linear-gradient(165deg, transparent 48%, rgba(255, 253, 254, 0.85) 53%, rgba(255, 200, 221, 0.45) 59%, transparent 66%);
+    }
+    .silk-banner::after {
+      background:
+        linear-gradient(12deg, transparent 42%, rgba(255, 255, 255, 0.72) 49%, rgba(255, 228, 233, 0.58) 53%, transparent 61%),
+        linear-gradient(8deg, transparent 57%, rgba(199, 146, 166, 0.18) 62%, transparent 68%);
+    }
+    .banner-kicker, .banner-name { color: #A86B82; }
+    .banner-caption { color: #96687A; }
+    .brand { color: var(--rose-700); }
+    .brand span, .eyebrow, .section-kicker, .number { color: var(--rose-600); }
+    nav { color: #8C737E; }
+    nav a:hover { color: var(--rose-700); }
+    .hero {
+      background:
+        radial-gradient(ellipse at 92% 12%, rgba(255, 228, 233, 0.8), transparent 36%),
+        linear-gradient(118deg, rgba(255, 255, 255, 0.96), rgba(255, 240, 243, 0.92) 55%, rgba(255, 228, 233, 0.55));
+      border: 1px solid #FFFFFF;
+      box-shadow: 0 22px 60px rgba(199, 146, 166, 0.12);
+    }
+    .hero::before { color: rgba(168, 107, 130, 0.55); }
+    .hero::after { color: rgba(246, 165, 184, 0.16); }
+    h1, .info-value, .goal-card h3, .movie-info h3 { color: #57414B; }
+    h1 span { color: var(--rose-700); }
+    h2 { color: #634955; }
+    .intro, .goal-card p, .interest-list, .movie-info p, .connect p { color: #856C77; }
+    .tag {
+      color: #8C5E70;
+      border-color: rgba(199, 146, 166, 0.28);
+      background: rgba(255, 255, 255, 0.82);
+    }
+    .portrait-shell:before { border-color: rgba(246, 165, 184, 0.65); }
+    .portrait-shell:after { border-color: rgba(255, 200, 221, 0.85); }
+    .glass {
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid #FFFFFF;
+      box-shadow: 0 14px 36px rgba(199, 146, 166, 0.09);
+    }
+    .info-line { border-bottom-color: rgba(199, 146, 166, 0.15); }
+    .info-label, .section-note { color: #997F8B; }
+    .goal-card {
+      background: linear-gradient(125deg, #FFF0F3, #FFE4E9 58%, #FFFDFE);
+      border-color: rgba(255, 200, 221, 0.65);
+    }
+    .goal-chip {
+      background: rgba(255, 200, 221, 0.35);
+      color: #A86B82;
+    }
+    .movie:hover { border-color: rgba(246, 165, 184, 0.75); }
+    .button {
+      color: #FFFDFE;
+      background: linear-gradient(105deg, #D98EA6, #C792A6);
+      box-shadow: 0 8px 20px rgba(199, 146, 166, 0.25);
+    }
+    .video { border-color: rgba(199, 146, 166, 0.25); }
+    footer { color: #A38A95; }
+
+
+    /* ===== Screenshot-matched soft pink palette ===== */
+    :root {
+      --rose-50: #FCF2F4;
+      --rose-100: #FFE4E9;
+      --rose-200: #FFD3DA;
+      --rose-300: #FAAABD;
+      --rose-600: #D3869F;
+      --rose-700: #B26888;
+      --ink: #4B505A;
+      --muted: #747984;
+      --pink: var(--rose-600);
+      --violet: #F4D4DD;
+      --panel: rgba(255,255,255,.88);
+      --line: rgba(211,134,159,.22);
+    }
+
+    body {
+      color: var(--ink);
+      background-color: #FFFFFF;
+      background-image:
+        radial-gradient(ellipse at 10% 12%, rgba(255,228,233,.72), transparent 38%),
+        radial-gradient(ellipse at 92% 42%, rgba(250,170,189,.20), transparent 34%),
+        linear-gradient(160deg, #FFFFFF 0%, #FCF2F4 52%, #FFFFFF 100%);
+    }
+
+    .silk-banner {
+      background:
+        radial-gradient(ellipse at 16% 72%, rgba(255,255,255,.98) 0 12%, transparent 42%),
+        radial-gradient(ellipse at 82% 22%, rgba(250,170,189,.30), transparent 42%),
+        linear-gradient(115deg, #FCF2F4 0%, #FFFFFF 35%, #FFE4E9 70%, #FFD3DA 100%);
+      border-bottom: 1px solid rgba(211,134,159,.16);
+    }
+    .silk-banner::before {
+      background:
+        linear-gradient(175deg, transparent 34%, rgba(255,255,255,.92) 42%, rgba(255,228,233,.72) 47%, transparent 55%),
+        linear-gradient(165deg, transparent 48%, rgba(255,255,255,.84) 53%, rgba(255,211,218,.42) 59%, transparent 66%);
+    }
+    .silk-banner::after {
+      background:
+        linear-gradient(12deg, transparent 42%, rgba(255,255,255,.72) 49%, rgba(255,228,233,.56) 53%, transparent 61%),
+        linear-gradient(8deg, transparent 57%, rgba(211,134,159,.15) 62%, transparent 68%);
+    }
+
+    .banner-kicker, .banner-name { color: #D3869F; }
+    .banner-caption { color: #A86B82; }
+    .brand { color: #B26888; }
+    .brand span, .eyebrow, .section-kicker, .number { color: #D3869F; }
+    nav { color: #747984; }
+    nav a:hover { color: #B26888; }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 92% 12%, rgba(255,228,233,.78), transparent 36%),
+        linear-gradient(118deg, rgba(255,255,255,.97), rgba(252,242,244,.94) 55%, rgba(255,228,233,.52));
+      border: 1px solid #FFFFFF;
+      box-shadow: 0 22px 60px rgba(211,134,159,.12);
+    }
+    .hero::before { color: rgba(178,104,136,.48); }
+    .hero::after { color: rgba(211,134,159,.13); }
+
+    h1, .info-value, .goal-card h3, .movie-info h3 { color: #4B505A; }
+    h1 span { color: #D3869F; }
+    h2 { color: #4B505A; }
+    .intro, .goal-card p, .interest-list, .movie-info p, .connect p { color: #747984; }
+
+    .tag {
+      color: #805D6D;
+      border-color: rgba(211,134,159,.26);
+      background: rgba(255,255,255,.84);
+    }
+    .portrait-shell:before { border-color: rgba(211,134,159,.58); }
+    .portrait-shell:after { border-color: rgba(250,170,189,.72); }
+
+    .glass {
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.98);
+      box-shadow: 0 14px 36px rgba(211,134,159,.09);
+    }
+    .info-line { border-bottom-color: rgba(211,134,159,.15); }
+    .info-label, .section-note { color: #8A7B82; }
+
+    .goal-card {
+      background: linear-gradient(125deg, #FCF2F4, #FFE4E9 58%, #FFFFFF);
+      border-color: rgba(250,170,189,.52);
+    }
+    .goal-chip {
+      background: rgba(255,211,218,.48);
+      color: #B26888;
+    }
+
+    .movie:hover { border-color: rgba(211,134,159,.62); }
+    .button {
+      color: #FFFFFF;
+      background: linear-gradient(105deg, #D3869F, #B26888);
+      box-shadow: 0 8px 20px rgba(211,134,159,.22);
+    }
+    .button:hover { filter: brightness(1.05); }
+    .video { border-color: rgba(211,134,159,.22); }
+    footer { color: #9A858E; }
+
   </style>
 </head>
 <body>
@@ -517,10 +709,10 @@
 
     <section>
       <div class="section-head">
-        <div><div class="section-kicker">05 / A little break</div><h2>Một video để thư giãn</h2></div>
+        <div><div class="section-kicker">05 / Favourite song</div><h2>Bài hát yêu thích</h2></div>
       </div>
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/io0UQ74sXfw?si=MuDn_8CKXi6YLQDw" title="Video yêu thích" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/io0UQ74sXfw?si=MuDn_8CKXi6YLQDw" title="Bài hát yêu thích" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
       </div>
     </section>
 
