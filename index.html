@@ -625,7 +625,237 @@
       .book { display:grid; grid-template-columns:115px 1fr; align-items:center; }
       .book-cover { height:172px; aspect-ratio:2/3; }
     }
+  
+    /* ===== Enhanced Typography & Effects (Preserving Original Colors, Fonts, and Layout) ===== */
+    body {
+      font-size: 16.5px;
+    }
+
+    /* Chữ nội dung to hơn một xíu và đậm hơn */
+    nav {
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+    .intro {
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: #5c4e56;
+    }
+    .tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+    .tag:hover {
+      transform: translateY(-3px);
+      background: #FFFFFF;
+      box-shadow: 0 6px 16px rgba(198, 95, 134, 0.2);
+    }
+    .section-kicker {
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    .section-note {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .info-label {
+      font-size: 0.96rem;
+      font-weight: 600;
+      width: 115px;
+    }
+    .info-value {
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+    .goal-card h3 {
+      font-size: 1.48rem;
+      font-weight: 700;
+    }
+    .goal-card p {
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: #5c4e56;
+    }
+    .goal-chip {
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+    .interest-list {
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: #5c4e56;
+    }
+    .movie-info h3, .book-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .movie-info p {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .connect strong {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #414650;
+    }
+    .connect p {
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #5c4e56;
+    }
+    .button {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    footer {
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    /* Các hiệu ứng mượt mà & tinh tế */
+    .topbar {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      padding: 14px 22px;
+      margin-top: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 28px rgba(169, 67, 109, 0.08);
+      transition: box-shadow 0.3s ease, background 0.3s ease;
+    }
+    nav a {
+      position: relative;
+      padding: 4px 2px;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #C65F86, #A9436D);
+      transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hiệu ứng nổi nhẹ cho ảnh đại diện */
+    .portrait-shell {
+      animation: floatPortrait 6s ease-in-out infinite;
+    }
+    @keyframes floatPortrait {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-9px); }
+    }
+
+    /* Hiệu ứng hover & ánh sáng lướt cho thẻ glass */
+    .glass {
+      position: relative;
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+    }
+    .glass:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 44px rgba(169, 67, 109, 0.16);
+      border-color: rgba(198, 95, 134, 0.45);
+    }
+
+    /* Hiệu ứng zoom mượt cho poster phim, bìa sách và ảnh game */
+    .poster, .book-cover, .game-media-single img, .game-media-double img {
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .movie:hover .poster,
+    .book:hover .book-cover,
+    .game-row:hover .game-media-single img {
+      transform: scale(1.04);
+    }
+    .game-media-double img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Hiệu ứng ánh sáng lướt cho nút bấm */
+    .button {
+      position: relative;
+      overflow: hidden;
+    }
+    .button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.55s ease;
+    }
+    .button:hover::before {
+      left: 140%;
+    }
+
+    /* Hiệu ứng xuất hiện mềm mại khi cuộn trang (Scroll Reveal) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Cánh hoa hồng pastel rơi nhẹ nhàng */
+    .petal-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 50;
+      overflow: hidden;
+    }
+    .petal {
+      position: absolute;
+      top: -20px;
+      background: radial-gradient(circle at 30% 30%, #FFFFFF, #F5B9CB);
+      border-radius: 65% 35% 65% 35% / 55% 45% 55% 45%;
+      opacity: 0.48;
+      animation: petalFall linear infinite;
+    }
+    @keyframes petalFall {
+      0% {
+        transform: translateY(-20px) translateX(0px) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.5;
+      }
+      85% {
+        opacity: 0.45;
+      }
+      100% {
+        transform: translateY(105vh) translateX(45px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media(max-width:760px) {
+      .topbar {
+        border-radius: 22px;
+        padding: 12px 16px;
+      }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .portrait-shell, .petal { animation: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
   </style>
+
 </head>
 <body>
   <header class="silk-banner" aria-label="Banner Trần Bảo Khanh">
@@ -800,5 +1030,48 @@
 
     <footer>© 2026 · Thiết kế bởi Trần Bảo Khanh · 12A4 – THPT Hòn Gai</footer>
   </div>
+
+  <div class="petal-layer" aria-hidden="true"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hiệu ứng xuất hiện mượt khi cuộn trang
+      const targets = document.querySelectorAll('.hero, section, .glass, .movie, .book, .game-row');
+      targets.forEach((el, idx) => {
+        el.classList.add('reveal');
+        if (el.classList.contains('movie') || el.classList.contains('book')) {
+          el.style.transitionDelay = `${(idx % 3) * 90}ms`;
+        }
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+      targets.forEach(el => observer.observe(el));
+
+      // Tạo hiệu ứng cánh hoa pastel rơi nhẹ
+      const petalLayer = document.querySelector('.petal-layer');
+      if (petalLayer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const petalCount = 14;
+        for (let i = 0; i < petalCount; i++) {
+          const petal = document.createElement('span');
+          petal.className = 'petal';
+          const size = 8 + Math.random() * 8;
+          petal.style.width = `${size}px`;
+          petal.style.height = `${size * 0.72}px`;
+          petal.style.left = `${Math.random() * 100}%`;
+          petal.style.animationDuration = `${11 + Math.random() * 10}s`;
+          petal.style.animationDelay = `${Math.random() * 10}s`;
+          petalLayer.appendChild(petal);
+        }
+      }
+    });
+  </script>
 </body>
+
 </html>
