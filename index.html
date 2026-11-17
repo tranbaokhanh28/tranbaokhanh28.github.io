@@ -854,6 +854,166 @@
       .portrait-shell, .petal { animation: none !important; }
       .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
     }
+
+    /* ===== Creative Chapter Index & Bookmark Ribbon Navigation ===== */
+    .index-ribbon-wrap {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .index-ribbon {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 8px 14px;
+      background: transparent;
+    }
+    .ribbon-seal {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 16px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 0.16em;
+      color: #A9436D;
+      background: linear-gradient(135deg, #FFFFFF 0%, #FBE9EE 100%);
+      border: 1.5px solid rgba(198, 95, 134, 0.35);
+      border-radius: 18px 6px 18px 6px;
+      box-shadow: 0 8px 20px rgba(169, 67, 109, 0.12);
+      transform: rotate(-1.5deg);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease;
+      flex-shrink: 0;
+    }
+    .ribbon-seal:hover {
+      transform: rotate(0deg) translateY(-2px);
+      box-shadow: 0 12px 26px rgba(169, 67, 109, 0.2);
+    }
+    .ribbon-seal .seal-star {
+      color: #C65F86;
+      font-size: 0.82rem;
+    }
+    .ribbon-seal span span {
+      color: #C65F86;
+    }
+    .ribbon-divider {
+      flex: 1;
+      max-width: 28px;
+      height: 1px;
+      border-top: 1.5px dashed rgba(198, 95, 134, 0.35);
+    }
+    .chapter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .chapter-tab {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #6D525E;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(198, 95, 134, 0.24);
+      border-radius: 16px 16px 16px 4px;
+      box-shadow: 0 5px 15px rgba(169, 67, 109, 0.08);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  background 0.28s ease,
+                  color 0.28s ease,
+                  border-color 0.28s ease,
+                  box-shadow 0.28s ease;
+    }
+    .chapter-tab::after {
+      display: none;
+    }
+    .chapter-tab:nth-child(even) {
+      border-radius: 16px 16px 4px 16px;
+    }
+    .chapter-tab .tab-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 6px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #A9436D;
+      background: #FBE9EE;
+      border-radius: 999px;
+      transition: background 0.28s ease, color 0.28s ease;
+    }
+    .chapter-tab:hover {
+      color: #A9436D;
+      background: #FFFFFF;
+      border-color: rgba(198, 95, 134, 0.55);
+      transform: translateY(-3px) rotate(-1deg);
+      box-shadow: 0 10px 22px rgba(169, 67, 109, 0.16);
+    }
+    .chapter-tab:nth-child(even):hover {
+      transform: translateY(-3px) rotate(1deg);
+    }
+    .chapter-tab:hover .tab-num {
+      background: #FBD5DF;
+      color: #A9436D;
+    }
+    .chapter-tab.is-active {
+      color: #FFFFFF;
+      background: linear-gradient(110deg, #C65F86, #A9436D);
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(169, 67, 109, 0.26);
+    }
+    .chapter-tab.is-active .tab-num {
+      background: rgba(255, 255, 255, 0.25);
+      color: #FFFFFF;
+    }
+    @media(max-width: 860px) {
+      .index-ribbon {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 6px 4px;
+      }
+      .ribbon-seal {
+        align-self: flex-start;
+        padding: 7px 13px;
+        font-size: 0.8rem;
+      }
+      .ribbon-divider {
+        display: none;
+      }
+      .chapter-tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .chapter-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .chapter-tab {
+        flex-shrink: 0;
+        padding: 7px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
   </style>
 
 </head>
@@ -867,17 +1027,23 @@
     </div>
   </header>
   <div class="wrap">
-    <div class="topbar">
-      <div class="brand">KHANH<span>.</span></div>
-      <nav aria-label="Điều hướng">
-        <a href="#about">Giới thiệu</a>
-        <a href="#goals">Mục tiêu</a>
-        <a href="#movies">Phim yêu thích</a>
-        <a href="#songs">Bài hát yêu thích</a>
-        <a href="#games">Game yêu thích</a>
-        <a href="#books">Sách yêu thích</a>
-        <a href="#contact">Liên hệ</a>
-      </nav>
+    <div class="index-ribbon-wrap">
+      <div class="index-ribbon" role="navigation" aria-label="Mục lục trang">
+        <a href="#" class="ribbon-seal" title="Lên đầu trang">
+          <span class="seal-star">✦</span>
+          <span class="seal-text">KHANH<span>.</span></span>
+        </a>
+        <div class="ribbon-divider" aria-hidden="true"></div>
+        <nav class="chapter-tabs">
+          <a href="#about" class="chapter-tab" data-target="about"><span class="tab-num">01</span><span class="tab-label">Giới thiệu</span></a>
+          <a href="#goals" class="chapter-tab" data-target="goals"><span class="tab-num">02</span><span class="tab-label">Mục tiêu</span></a>
+          <a href="#movies" class="chapter-tab" data-target="movies"><span class="tab-num">03</span><span class="tab-label">Phim yêu thích</span></a>
+          <a href="#songs" class="chapter-tab" data-target="songs"><span class="tab-num">04</span><span class="tab-label">Bài hát yêu thích</span></a>
+          <a href="#games" class="chapter-tab" data-target="games"><span class="tab-num">05</span><span class="tab-label">Game yêu thích</span></a>
+          <a href="#books" class="chapter-tab" data-target="books"><span class="tab-num">06</span><span class="tab-label">Sách yêu thích</span></a>
+          <a href="#contact" class="chapter-tab" data-target="contact"><span class="tab-num">07</span><span class="tab-label">Liên hệ</span></a>
+        </nav>
+      </div>
     </div>
 
     <header class="hero">
@@ -1053,6 +1219,28 @@
       }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
 
       targets.forEach(el => observer.observe(el));
+
+
+      // Đánh dấu thẻ mục lục đang xem khi cuộn trang
+      const navTabs = document.querySelectorAll('.chapter-tab');
+      const sections = Array.from(navTabs)
+        .map(tab => document.getElementById(tab.dataset.target))
+        .filter(Boolean);
+
+      const updateActiveTab = () => {
+        const scrollPos = window.scrollY + 160;
+        let currentId = '';
+        sections.forEach(sec => {
+          if (scrollPos >= sec.offsetTop) {
+            currentId = sec.id;
+          }
+        });
+        navTabs.forEach(tab => {
+          tab.classList.toggle('is-active', tab.dataset.target === currentId);
+        });
+      };
+      window.addEventListener('scroll', updateActiveTab, { passive: true });
+      updateActiveTab();
 
       // Tạo hiệu ứng cánh hoa pastel rơi nhẹ
       const petalLayer = document.querySelector('.petal-layer');
